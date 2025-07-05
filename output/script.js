@@ -39,3 +39,65 @@ function printInfo(info) {
 }
 printInfo("Donor Farid");
 printInfo(500);
+function greet() {
+    console.log("👋 Hello how are you?");
+}
+greet();
+function greetUser(name) {
+    console.log(`👋 Hello, ${name}!`);
+}
+greetUser("Farid Mia");
+function add(a, b) {
+    return a + b;
+}
+let total = add(10, 20);
+console.log("মোট:", total); // 30
+function sayHi(name) {
+    if (name) {
+        console.log(`Hi, ${name}`);
+    }
+    else {
+        console.log("Hi, Stranger!");
+    }
+}
+sayHi(); // Hi, Stranger!
+sayHi("Enric"); // Hi, Enric
+function multiply(x, y = 2) {
+    return x * y;
+}
+console.log(multiply(5)); // 10
+console.log(multiply(5, 3)); // 15
+const subtract = (a, b) => {
+    return a - b;
+};
+console.log(subtract(10, 3)); // 7
+function printValue(value) {
+    console.log("Value is:", value);
+}
+printValue("Donation");
+printValue(1000);
+let multiplier;
+multiplier = function (a, b) {
+    return a * b;
+};
+console.log(multiplier(5, 3)); // 15
+class Player {
+    // name: string;
+    // age: number;
+    // country: string;
+    // constructor(n: string, a: number, c: string) {
+    //   this.name = n;
+    //   this.age = a;
+    //   this.country = c;
+    // }
+    constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing..`);
+    }
+}
+const mashrafi = new Player("Mashrafi", 40, "bangladesh");
+mashrafi.play();

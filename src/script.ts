@@ -47,3 +47,86 @@ function printInfo(info: string | number) {
 
 printInfo("Donor Farid");
 printInfo(500);
+
+function greet(): void {
+  console.log("👋 Hello how are you?");
+}
+
+greet();
+
+function greetUser(name: string): void {
+  console.log(`👋 Hello, ${name}!`);
+}
+
+greetUser("Farid Mia");
+
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+let total = add(10, 20);
+console.log("মোট:", total); // 30
+
+function sayHi(name?: string): void {
+  if (name) {
+    console.log(`Hi, ${name}`);
+  } else {
+    console.log("Hi, Stranger!");
+  }
+}
+
+sayHi(); // Hi, Stranger!
+sayHi("Enric"); // Hi, Enric
+
+function multiply(x: number, y: number = 2): number {
+  return x * y;
+}
+
+console.log(multiply(5)); // 10
+console.log(multiply(5, 3)); // 15
+
+const subtract = (a: number, b: number): number => {
+  return a - b;
+};
+
+console.log(subtract(10, 3)); // 7
+
+function printValue(value: string | number): void {
+  console.log("Value is:", value);
+}
+
+printValue("Donation");
+printValue(1000);
+
+let multiplier: (x: number, y: number) => number;
+
+multiplier = function (a, b) {
+  return a * b;
+};
+
+console.log(multiplier(5, 3)); // 15
+
+class Player {
+  // name: string;
+  // age: number;
+  // country: string;
+
+  // constructor(n: string, a: number, c: string) {
+  //   this.name = n;
+  //   this.age = a;
+  //   this.country = c;
+  // }
+  constructor(
+    private name: string,
+    public age: number,
+    readonly country: string
+  ) {}
+
+  play() {
+    console.log(`${this.name} from ${this.country} is playing..`);
+  }
+}
+
+const mashrafi = new Player("Mashrafi", 40, "bangladesh");
+
+mashrafi.play();
