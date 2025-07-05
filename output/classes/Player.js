@@ -16,3 +16,13 @@ export class Player {
         console.log(`${this.name} from ${this.country} is playing..`);
     }
 }
+function drawRectangle(options) {
+    let width = options.width;
+    let height = options.length;
+}
+let threedOptions = {
+    width: 20,
+    length: 10,
+    height: 30,
+};
+drawRectangle(threedOptions);

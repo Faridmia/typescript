@@ -1,4 +1,5 @@
 import { Player } from "./classes/Player.js";
+import { IsPlayer } from "./interfaces/isPlayer.js";
 console.log("hello typesript..");
 
 const country = "Bangladesh";
@@ -109,4 +110,24 @@ console.log(multiplier(5, 3)); // 15
 
 const mashrafi = new Player("Mashrafi", 40, "bangladesh");
 
+let sakib: IsPlayer;
+sakib = new Player("sakib", 34, "bangladesh");
 mashrafi.play();
+
+interface RectangleOptions {
+  width: Number;
+  length: Number;
+}
+
+function drawRectangle(options: RectangleOptions) {
+  let width = options.width;
+  let height = options.length;
+}
+
+let threedOptions = {
+  width: 20,
+  length: 10,
+  height: 30,
+};
+
+drawRectangle(threedOptions);
