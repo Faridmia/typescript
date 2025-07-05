@@ -21,3 +21,21 @@ function getAgeInfo(age) {
 }
 console.log(getAgeInfo(25));
 console.log(getAgeInfo("1998"));
+function handleUserInput(input) {
+    if (typeof input === "string") {
+        console.log("User typed:", input.toUpperCase());
+    }
+    else if (typeof input === "number") {
+        console.log("User gave number:", input.toFixed(2));
+    }
+    else {
+        console.log("Unknown input type");
+    }
+}
+handleUserInput("hello");
+handleUserInput(123.456);
+function printInfo(info) {
+    console.log("Info:", info);
+}
+printInfo("Donor Farid");
+printInfo(500);
