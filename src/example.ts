@@ -19,7 +19,29 @@ names.push("Bob");
 console.log(names);
 
 
-type User = {
+// type User = {
+//     id: number;
+//     name: string;
+//     email: string;
+// };
+
+// const user: User = {    
+//     id: 1,
+//     name: "John Doe",
+//     email: "john.doe@example.com"
+// };
+
+// const person: User = {
+//     id: 2,
+//     name: "Jane Smith",
+//     email: "jane.smith@example.com"
+// };
+
+// console.log(user);
+// console.log(person);
+
+
+interface User  {
     id: number;
     name: string;
     email: string;
