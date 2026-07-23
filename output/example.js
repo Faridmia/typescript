@@ -9,8 +9,7 @@ const names = [];
 names.push("Alice");
 names.push("Bob");
 console.log(names);
-
-
+;
 const user = {
     id: 1,
     name: "John Doe",
