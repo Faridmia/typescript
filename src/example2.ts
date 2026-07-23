@@ -91,3 +91,33 @@ const t3: Teeshirt = {
 
 
 
+type Rectangle = {
+    width: number;
+    height: number;
+};
+
+type Circle = {
+    radius: number;
+};
+
+type Square = {
+    sideLength: number;
+};
+
+type shape = Rectangle | Circle | Square;
+
+function calculateArea(shape: shape): number {
+    if ("width" in shape && "height" in shape) {
+        return shape.width * shape.height;
+    }
+
+    if ("radius" in shape) {
+        return Math.PI * shape.radius * shape.radius;
+    }
+
+    if ("sideLength" in shape) {
+        return shape.sideLength * shape.sideLength;
+    }
+
+    throw new Error("Invalid shape");
+}

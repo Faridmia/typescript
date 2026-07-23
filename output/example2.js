@@ -39,3 +39,15 @@ const t3 = {
     size: 40,
     color: Tcolors.Yellow
 };
+function calculateArea(shape) {
+    if ("width" in shape && "height" in shape) {
+        return shape.width * shape.height;
+    }
+    if ("radius" in shape) {
+        return Math.PI * shape.radius * shape.radius;
+    }
+    if ("sideLength" in shape) {
+        return shape.sideLength * shape.sideLength;
+    }
+    throw new Error("Invalid shape");
+}
