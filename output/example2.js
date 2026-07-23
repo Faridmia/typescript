@@ -20,3 +20,22 @@ function divide(a, b) {
 }
 const result = divide(10, 3);
 console.log(result); // Output: [3, 1]
+// typescript enums
+var Tcolors;
+(function (Tcolors) {
+    Tcolors["Red"] = "red";
+    Tcolors["Green"] = "green";
+    Tcolors["Yellow"] = "yellow";
+})(Tcolors || (Tcolors = {}));
+const t1 = {
+    size: 42,
+    color: Tcolors.Red
+};
+const t2 = {
+    size: 38,
+    color: Tcolors.Green
+};
+const t3 = {
+    size: 40,
+    color: Tcolors.Yellow
+};

@@ -49,9 +49,9 @@ const order: OrderItem = ["Laptop", 2, 1500];
 
 console.log(order); // Output: ["Laptop", 2, 1500]
 
+type Division = [ number, number]; // [quotient, remainder]
 
-
-function divide(a: number, b: number): [number,number] {
+function divide( a: number, b: number ): Division {
    const quotient = Math.floor(a / b);
    const remainder = a % b;
    return [quotient, remainder];      
@@ -59,3 +59,35 @@ function divide(a: number, b: number): [number,number] {
 
 const result = divide(10, 3);
 console.log(result); // Output: [3, 1]
+
+
+// typescript enums
+
+enum Tcolors {
+    Red = "red",
+    Green = "green",
+    Yellow = "yellow"
+}
+
+type Teeshirt = {
+    size: number,
+    color: Tcolors
+};
+
+const t1: Teeshirt = {
+    size: 42,
+    color: Tcolors.Red
+};
+
+const t2: Teeshirt = {
+    size: 38,
+    color: Tcolors.Green
+};
+
+const t3: Teeshirt = {
+    size: 40,
+    color: Tcolors.Yellow
+}
+
+
+
