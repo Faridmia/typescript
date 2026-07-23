@@ -17,6 +17,9 @@
    
     "skipLibCheck": true,
     "noEmitOnError" : true,
+   // "lib" : ["ES2025"],
+
+ // "moduleDetection": "force" /* Control how modules are detected. */, // module hisabe export korte chaile tokhon eita use korte hoi jodi variable ar error forcelly dur korte chai tokhon eita use kora hoi 
 
   }
 }
