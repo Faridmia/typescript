@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     
-    "module": "es2015" /* Specify what module code is generated. */,
+    "module": "esnext" /* Specify what module code is generated. */,
     "rootDir": "./src" /* Specify the root folder within your source files. */,
    
     "outDir": "./output" /* Specify an output folder for all emitted files. */,

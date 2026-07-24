@@ -1,4 +1,3 @@
-"use strict";
 // type Colors = 'red' | 'green' | 'blue';
 const Users = [];
 let lastId = 0;
@@ -30,3 +29,4 @@ function getFirstElement(arr) {
 }
 console.log(getFirstElement(fruits.map(fruit => fruit.toUpperCase()))); // Output: 'APPLE'
 console.log(getFirstElement(numbers.map(n => n.toFixed(2)))); // Output: '1.00'
+export {};
