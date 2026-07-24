@@ -44,3 +44,18 @@ function addUser( user: User2): User2 {
 addUser({ name: 'John Doe', email: 'john.doe@example.com' });
 
 console.log(Users); // Output: [{ id: 1, name: 'John Doe', email: 'tsc
+
+
+
+// generic function
+
+const fruits: string[] = ['apple', 'banana', 'orange'];
+
+const numbers: number[] = [1, 2, 3, 4, 5];
+
+function getFirstElement<T>(arr: T[]): T | undefined {
+  return arr[0];
+}
+
+console.log(getFirstElement(fruits.map(fruit => fruit.toUpperCase()))); // Output: 'APPLE'
+console.log(getFirstElement(numbers.map(n => n.toFixed(2)))); // Output: '1.00'
