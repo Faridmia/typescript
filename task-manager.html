@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#eef2f7;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:20px;
+        }
+
+        .task-manager{
+            width:500px;
+            background:#fff;
+            padding:35px;
+            border-radius:18px;
+            box-shadow:0 15px 40px rgba(0,0,0,.12);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+            color:#1f2937;
+        }
+
+        h3{
+            color:#6b7280;
+            font-size:15px;
+            letter-spacing:1px;
+            margin-bottom:12px;
+            text-transform:uppercase;
+        }
+
+        .task-form{
+            display:flex;
+            gap:12px;
+            margin-bottom:30px;
+        }
+
+        .task-form input{
+            flex:1;
+            padding:14px;
+            border:1px solid #d1d5db;
+            border-radius:10px;
+            font-size:16px;
+            outline:none;
+        }
+
+        .task-form input:focus{
+            border-color:#374151;
+        }
+
+        .task-form button{
+            padding:14px 22px;
+            background:#374151;
+            color:#fff;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:15px;
+            font-weight:bold;
+        }
+
+        .task-form button:hover{
+            background:#1f2937;
+        }
+
+        .task-list{
+            list-style:none;
+        }
+
+        .task-list li{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            padding:16px;
+            border:1px solid #e5e7eb;
+            border-radius:10px;
+            margin-bottom:12px;
+            transition:.3s;
+        }
+
+        .task-list li:hover{
+            background:#f9fafb;
+        }
+
+        .task-list input[type="checkbox"]{
+            width:18px;
+            height:18px;
+            cursor:pointer;
+        }
+
+
+        .task-list input[type="checkbox"]:checked + span{
+            text-decoration: line-through;
+            color:#9ca3af;
+        }
+
+        @media(max-width:600px){
+
+            .task-manager{
+                width:100%;
+            }
+
+            .task-form{
+                flex-direction:column;
+            }
+
+            .task-form button{
+                width:100%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="task-manager">
+
+    <h1>My Task List</h1>
+
+    <h3>Add a Task</h3>
+
+    <form class="task-form">
+
+        <input
+            type="text" 
+            id="task-input"
+            placeholder="Enter a new task"
+        >
+
+        <button type="submit">Add Task</button>
+
+    </form>
+
+    <h3>Tasks</h3>
+
+    <ul class="task-list" id="task-list">
+
+        <li>
+            <input type="checkbox" checked>
+            <span class="completed">Buy groceries</span>
+        </li>
+
+        <li>
+            <input type="checkbox">
+            <span>Finish TypeScript homework</span>
+        </li>
+
+        <li>
+            <input type="checkbox">
+            <span>Call the dentist</span>
+        </li>
+
+        <li>
+            <input type="checkbox" checked>
+            <span class="completed">Water the plants</span>
+        </li>
+
+    </ul>
+
+    <button id="exporttask">Export Tasks</button>
+
+</div>
+    <script type="module" src="./output/task-manager.js"></script>
+</body>
+</html>
