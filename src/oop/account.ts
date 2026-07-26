@@ -18,7 +18,7 @@ interface BaseAccount {
     status() : void;
 }
 
-class Account {
+class Account implements BaseAccount {
 
     protected isLimited: boolean = false;
     protected limit: number = 0;
